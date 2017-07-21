@@ -36,7 +36,9 @@ const WeatherComp = ({briefdata,handleTap}) =>{
             <div className={styles.time}>
               2017-5-08
             </div>
-            <div className={styles.temperature}></div>
+            <div className={styles.temperature}>
+              <p>25<span className={styles.tmp}>℃</span></p>
+            </div>
             <div className={styles.status}></div>
           </div>
         </div>
