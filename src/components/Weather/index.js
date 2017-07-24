@@ -2,10 +2,10 @@ import React, { PropTypes } from 'react';
 import cs from 'classnames';
 import styles from './index.less';
 import { NavBar, Icon } from 'antd-mobile';
+import { setDefaultvalue } from '../../utils/mutils';
 
 
-
-const WeatherComp = ({briefdata,handleTap}) =>{
+const WeatherComp = ({briefdata,brief3day,handleTap}) =>{
     let currMonth = new Date().getMonth() + 1; //获取月份判断季节
     let spring=false;
     let summer=false;
@@ -34,12 +34,21 @@ const WeatherComp = ({briefdata,handleTap}) =>{
         <div className={styles.scroll}>
           <div className={styles.details}>
             <div className={styles.time}>
-              2017-5-08
+              更新于 {briefdata.condition.updatetime}
             </div>
             <div className={styles.temperature}>
-              <p>25<span className={styles.tmp}>℃</span></p>
+              <p>{briefdata.condition.temp}<span className={styles.tmp}>℃</span></p>
             </div>
-            <div className={styles.status}></div>
+            <div className={styles.status}>
+              <img className={styles.icon} src={'https://h5tq.moji.com/tianqi/assets/images/weather/w'+briefdata.condition.icon+'.png'}></img>
+              <span className={styles.margin}>{briefdata.condition.condition}</span>
+              <img className={styles.icon} src="src/assets/img/windDir.png"></img>
+              <span className={styles.margin}>{briefdata.condition.windDir}</span>
+              <img className={styles.icon} src="src/assets/img/speed.png"></img>
+              <span className={styles.margin}>{briefdata.condition.windLevel}级</span>
+              <img className={styles.icon} src="src/assets/img/hum.png"></img>
+              <span>{briefdata.condition.humidity}</span>
+            </div>
           </div>
         </div>
       </div>

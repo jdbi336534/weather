@@ -4,6 +4,12 @@
     align-items: center;
     justify-content: center;
 }
+.row-center-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 .weather{
     height:100%;
     width:100%;
@@ -37,7 +43,6 @@
 }
 .details{
     height:4.5rem;
-    background:#f0f;
     display: flex;
     flex-direction: column;
 }
@@ -48,13 +53,20 @@
 .temperature{
     flex:7;
     font-size:2rem;
-    background:green;
     .colum-center-flex;
 }
 .tmp{
-    font-size:.2rem;
+    font-size:.4rem;
     doisplay:inline-block;
+}
+.icon{
+    width:.5rem;
+    height:.5rem;
 }
 .status{
     flex:3;
+    .row-center-flex;
+}
+.margin{
+    margin-right:.3rem;
 }

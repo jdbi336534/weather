@@ -4,9 +4,10 @@ import { Link } from 'dva/router';
 import WeatherComp from "../components/Weather/index";
 
 const Weather=({dispatch,weather})=>{
-    const {briefdata} = weather;
+    const {briefdata,brief3day} = weather;
     const WeatherProps={
         briefdata,
+        brief3day,
         handleTap(){
             console.log('父组件：', briefdata);
         }
