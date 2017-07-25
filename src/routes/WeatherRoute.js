@@ -10,7 +10,7 @@ const Weather=({dispatch,weather})=>{
         brief3day,
         Drawerstatus,
         handleTap(){
-            console.log('父组件：', briefdata);
+            // console.log('父组件：', briefdata);
             dispatch({
                 type:'weather/commonData',
                 payload:{

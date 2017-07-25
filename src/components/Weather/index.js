@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import cs from 'classnames';
 import styles from './index.less';
 import { NavBar, Icon, Drawer, List } from 'antd-mobile';
-import { setDefaultvalue } from '../../utils/mutils';
 
 
 const WeatherComp = ({briefdata,brief3day,Drawerstatus,handleTap}) =>{
@@ -20,7 +19,7 @@ const WeatherComp = ({briefdata,brief3day,Drawerstatus,handleTap}) =>{
       } else {
         winter=true;
       }
-        const sidebar = (<List>
+      const sidebar = (<List>
       {[...Array(20).keys()].map((i, index) => {
         if (index === 0) {
           return (<List.Item key={index}
