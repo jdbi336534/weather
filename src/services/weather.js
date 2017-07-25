@@ -42,7 +42,7 @@ export async function briefaqi(params) {
 
 // 精简预报三天
 export async function briefforecast3days(params) {
-  return request('/api/brief', {
+  return request('/api/threeday', {
     method: 'post',
      headers: {
     "Content-Type": "application/x-www-form-urlencoded",
@@ -53,7 +53,7 @@ export async function briefforecast3days(params) {
 }
 // 精简实况
 export async function briefcondition(params) {
-  return request('/api/threeday', {
+  return request('/api/brief', {
     method: 'post',
      headers: {
     "Content-Type": "application/x-www-form-urlencoded",

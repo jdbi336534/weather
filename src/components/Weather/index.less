@@ -39,12 +39,20 @@
     background: rgba(0, 0, 0, 0.3);
 }
 .scroll{
-    flex:1;
+    // flex:1;
+    overflow: auto;
 }
 .details{
     height:4.5rem;
     display: flex;
     flex-direction: column;
+}
+.threeday{
+    height:4.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top:.2rem;
+    // background:#f0f;
 }
 .time{
     flex:1;
@@ -69,4 +77,48 @@
 }
 .margin{
     margin-right:.3rem;
+}
+.threetitle{
+    height:.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left:.15rem;
+}
+.threecontent{
+    height:.8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+    justify-content: center;
+}
+.center{
+    .row-center-flex;
+}
+.threeicon{
+     width:.4rem;
+     height:.4rem;
+}
+.threemargin{
+    margin:0 1.2rem;
+    display: flex;
+    flex-direction: row;
+}
+:global{
+    .my-drawer {
+    overflow: auto;
+    position: relative;
+    height:calc(100% - 0.9rem);
+    -webkit-overflow-scrolling: touch;
+    }
+    .my-drawer .am-drawer-sidebar {
+    background-color: #fff;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    }
+    .my-drawer .am-drawer-sidebar .am-list {
+    width: 6rem;
+    padding: 0;
+    }
 }

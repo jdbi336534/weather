@@ -10,7 +10,11 @@ export default {
 
   state: {
     briefdata: {
+      city:{
+        name:''
+      },
       condition: {
+        condition:'',
         updatetime: '',
         humidity:'',
         icon:'0',
@@ -19,7 +23,49 @@ export default {
         windLevel:''
       }
     },
-    brief3day: {}
+    brief3day: {
+      forecast: [{
+          conditionDay: '',
+          conditionIdDay: '0',
+          conditionIdNight: '0',
+          conditionNight: '',
+          predictDate: '',
+          tempDay: '',
+          tempNight: '',
+          updatetime: '',
+          windDirDay: '',
+          windDirNight: '',
+          windLevelDay: '',
+          windLevelNight: ''
+        }, {
+          conditionDay: '',
+          conditionIdDay: '0',
+          conditionIdNight: '0',
+          conditionNight: '',
+          predictDate: '',
+          tempDay: '',
+          tempNight: '',
+          updatetime: '',
+          windDirDay: '',
+          windDirNight: '',
+          windLevelDay: '',
+          windLevelNight: ''
+        }, {
+          conditionDay: '',
+          conditionIdDay: '0',
+          conditionIdNight: '0',
+          conditionNight: '',
+          predictDate: '',
+          tempDay: '',
+          tempNight: '',
+          updatetime: '',
+          windDirDay: '',
+          windDirNight: '',
+          windLevelDay: '',
+          windLevelNight: ''
+        }]
+    },
+    Drawerstatus:false
   },
 
   subscriptions: {
