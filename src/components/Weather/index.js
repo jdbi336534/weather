@@ -4,7 +4,7 @@ import styles from './index.less';
 import { NavBar, Icon, Drawer, List } from 'antd-mobile';
 
 
-const WeatherComp = ({briefdata,brief3day,Drawerstatus,handleTap}) =>{
+const WeatherComp = ({briefdata,brief3day,Drawerstatus,handleTap,onChange}) =>{
     let currMonth = new Date().getMonth() + 1; //获取月份判断季节
     let spring=false;
     let summer=false;
@@ -19,19 +19,12 @@ const WeatherComp = ({briefdata,brief3day,Drawerstatus,handleTap}) =>{
       } else {
         winter=true;
       }
-      const sidebar = (<List>
-      {[...Array(20).keys()].map((i, index) => {
-        if (index === 0) {
-          return (<List.Item key={index}
-            thumb="https://zos.alipayobjects.com/rmsportal/eOZidTabPoEbPeU.png"
-            multipleLine
-          >Category</List.Item>);
-        }
-        return (<List.Item key={index}
-          thumb="https://zos.alipayobjects.com/rmsportal/eOZidTabPoEbPeU.png"
-        >Category{index}</List.Item>);
-      })}
-    </List>);
+      const sidebar = (
+        <div className={styles.sidebar}>
+          <p className={styles.obcity}>我关注的城市</p>
+             <span className={styles.tag}>陕西</span>
+        </div>
+      );
     return (
     <div className={cs({[styles.weather]:true,[styles.summer]:summer,[styles.autumn]:autumn,[styles.spring]:spring,[styles.winter]:winter})}>
        <div className={styles.location}>

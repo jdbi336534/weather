@@ -62,3 +62,7 @@ export async function briefcondition(params) {
     body: qs.stringify(params)
   });
 }
+// 获得区域信息
+export async function getarea(params) {
+  return request('/eleps/area.html');
+}

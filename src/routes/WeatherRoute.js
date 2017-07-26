@@ -17,6 +17,9 @@ const Weather=({dispatch,weather})=>{
                     Drawerstatus:!Drawerstatus
                 }
             })
+        },
+        onChange(selected){
+            console.log(selected);
         }
     };
     return(

@@ -1,7 +1,8 @@
 import {
   briefforecast3days,
   briefcondition,
-  briefaqi
+  briefaqi,
+  getarea
 } from '../services/weather';
 
 export default {
@@ -91,6 +92,7 @@ export default {
                 lon: "106.969741"
               }
             });
+            dispatch({type:'area'});
             break;
         }
       });
@@ -136,6 +138,10 @@ export default {
           }
         })
       }
+    },
+    * area({payload},{call,put}){
+        const {data}=yield call(getarea);
+        console.log('area',data);
     }
   },
 

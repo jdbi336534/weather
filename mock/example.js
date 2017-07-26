@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-
+  'GET /eleps/*':'http://www.eleps.cn/data/',
   'POST /api/brief': function (req, res) {
     res.json({
       "code": 0,
