@@ -1,5 +1,5 @@
 
-## dva + TypeScript + atool-build
+## dva + React + atool-build
 
 ### dev
 - Run `npm install`
